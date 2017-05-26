@@ -631,6 +631,24 @@ component.$inject(document.body);
 
 ```
 
+```js
+var component = new Regular({
+  template: 
+    "{#list items as item}\
+     <span class='index'>{item_key}:{item}</span>\
+     {/list}",
+  data: {
+    items: {
+      a: 'a-1',
+      b: 'b-2',
+      c: 'c-3'
+    }
+  }
+})
+
+component.$inject(document.body);
+```
+
 __resulting html__
 
 ```html
